@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анна Смирнова | Косметолог-эстетист</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#faf8f6;color:#222;line-height:1.7}
+nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);padding:15px;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+nav ul{display:flex;justify-content:center;gap:25px;list-style:none;flex-wrap:wrap}
+nav a{text-decoration:none;color:#333;font-weight:bold}
+header{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1');background-size:cover;background-position:center;color:#fff}
+.hero h1{font-size:60px;margin-bottom:20px}
+.hero p{font-size:22px;max-width:700px;margin:auto}
+.btn{display:inline-block;margin-top:30px;padding:15px 35px;background:#c8a97e;color:#fff;text-decoration:none;border-radius:30px;transition:.3s}
+.btn:hover{transform:translateY(-4px)}
+.container{width:90%;max-width:1200px;margin:auto}
+section{padding:90px 0}
+h2{text-align:center;margin-bottom:40px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;padding:25px;border-radius:16px;box-shadow:0 4px 18px rgba(0,0,0,.08);transition:.3s}
+.card:hover{transform:translateY(-10px) scale(1.03)}
+footer{text-align:center;padding:40px;background:#222;color:#fff}
+
+.reveal{opacity:0;transform:translateY(50px);transition:all .8s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
+
+.socials{text-align:center;margin-top:20px}
+.socials a{margin:0 10px;text-decoration:none;color:#c8a97e;font-weight:bold}
+
+.modal{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.75);z-index:9999}
+.modal-content{background:#fff;width:90%;max-width:800px;margin:5% auto;padding:30px;border-radius:20px;max-height:80vh;overflow:auto}
+.close{float:right;font-size:30px;cursor:pointer}
+
+.cookie{position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:15px;text-align:center;z-index:500}
+.cookie button{padding:8px 14px;margin-left:10px}
+
+.top-btn{
+display:none;
+position:fixed;
+right:20px;
+bottom:80px;
+background:#c8a97e;
+color:#fff;
+border:none;
+padding:14px 18px;
+border-radius:50%;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<ul>
+<li><a href="#about">Обо мне</a></li>
+<li><a href="#services">Услуги</a></li>
+<li><a href="#reviews">Отзывы</a></li>
+<li><a href="#contacts">Контакты</a></li>
+</ul>
+</nav>
+
+<header>
+<div class="hero reveal">
+<h1>Анна Смирнова</h1>
+<p>Премиальный уход за кожей, современные процедуры и индивидуальный подход к каждому клиенту.</p>
+<a class="btn" href="#contacts">Записаться</a>
+</div>
+</header>
+
+<section id="about" class="container reveal">
+<h2>О специалисте</h2>
+<p>Более 8 лет опыта в эстетической косметологии. Работаю с профессиональной косметикой и подбираю уход индивидуально под особенности кожи клиента.</p>
+</section>
+
+<section id="services" class="container reveal">
+<h2>Услуги</h2>
+<div class="cards">
+<div class="card reveal"><h3>Чистка лица</h3><p>Глубокое очищение кожи.</p><b>от 3500 ₽</b></div>
+<div class="card reveal"><h3>Пилинг</h3><p>Обновление кожи и выравнивание тона.</p><b>от 4000 ₽</b></div>
+<div class="card reveal"><h3>Уходовые процедуры</h3><p>Увлажнение и восстановление.</p><b>от 5000 ₽</b></div>
+</div>
+</section>
+
+<section class="container reveal">
+<h2>Почему выбирают меня</h2>
+<div class="cards">
+<div class="card reveal">8+ лет опыта</div>
+<div class="card reveal">Сертифицированный специалист</div>
+<div class="card reveal">Премиальная косметика</div>
+<div class="card reveal">Индивидуальный подход</div>
+</div>
+</section>
+
+<section id="reviews" class="container reveal">
+<h2>Отзывы клиентов</h2>
+<div class="cards">
+<div class="card reveal">★★★★★<br><br>Очень внимательный специалист.</div>
+<div class="card reveal">★★★★★<br><br>Отличный результат и приятная атмосфера.</div>
+<div class="card reveal">★★★★★<br><br>Подобрали уход, который действительно помогает.</div>
+</div>
+</section>
+
+<section id="contacts" class="container reveal">
+<h2>Контакты</h2>
+<p>Телефон: +7 (999) 123-45-67</p>
+<div class="socials">
+<a href="https://vk.com" target="_blank">VK</a>
+<a href="https://telegram.org" target="_blank">Telegram</a>
+<a href="https://whatsapp.com" target="_blank">WhatsApp</a>
+</div>
+<br>
+<p>
+<a href="#" onclick="openPrivacy()">Политика конфиденциальности</a> |
+<a href="#" onclick="openCookie()">Информация о Cookie</a>
+</p>
+</section>
+
+<footer>
+© 2026 Анна Смирнова<br>
+Все права защищены
+</footer>
+
+<div class="modal" id="privacyModal">
+<div class="modal-content">
+<span class="close" onclick="closePrivacy()">&times;</span>
+<h2>Политика конфиденциальности</h2>
+<p>Демонстрационный текст политики конфиденциальности для портфолио. Для реального проекта рекомендуется подготовить юридически проверенную версию с учетом страны работы и способов сбора данных.</p>
+</div>
+</div>
+
+<div class="modal" id="cookieModal">
+<div class="modal-content">
+<span class="close" onclick="closeCookie()">&times;</span>
+<h2>Использование Cookie</h2>
+<p>Сайт может использовать технические cookie-файлы для обеспечения корректной работы и улучшения пользовательского опыта.</p>
+</div>
+</div>
+
+<div class="cookie" id="cookieBanner">
+Этот сайт использует Cookie.
+<button onclick="document.getElementById('cookieBanner').style.display='none'">Принять</button>
+</div>
+
+<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function reveal(){
+document.querySelectorAll('.reveal').forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top < window.innerHeight-100){el.classList.add('active');}
+});
+}
+window.addEventListener('scroll',reveal);
+reveal();
+
+function openPrivacy(){document.getElementById('privacyModal').style.display='block';}
+function closePrivacy(){document.getElementById('privacyModal').style.display='none';}
+
+function openCookie(){document.getElementById('cookieModal').style.display='block';}
+function closeCookie(){document.getElementById('cookieModal').style.display='none';}
+
+window.onscroll=function(){
+document.getElementById('topBtn').style.display =
+window.scrollY > 300 ? 'block' : 'none';
+}
+</script>
+
+</body>
+</html>
